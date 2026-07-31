@@ -5,13 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Creation Metaverse</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f6f9; }
-        h1 { color: #1e293b; }
-        p { color: #64748b; font-size: 1.2rem; }
+        /* CSS Styling Variables (Option B) */
+        :root {
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --navbar-bg: #ffffff;
+            --card-bg: #ffffff;
+        }
+
+        /* Global Structural Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Responsive Navigation Bar Design (Option A) */
+        .navbar {
+            background-color: var(--navbar-bg);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Main Feature Components */
+        .container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to contentcreation.metaverse!</h1>
-    <p>Your site is now successfully deploying automatically from GitHub to your Bluehost VPS.</p>
+
+    <!-- Header Navigation Layout -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">CC.Metaverse</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Core Page Content Area -->
+    <main class="container">
+        <h1 class="hero-title">Welcome to the Hub</h1>
+        <p class="hero-desc">Your decentralized playground is live, automated via GitHub Actions, and securely backed by Nginx on your Bluehost VPS.</p>
+    </main>
+
 </body>
 </html>
