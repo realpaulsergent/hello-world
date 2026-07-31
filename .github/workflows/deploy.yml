@@ -21,4 +21,5 @@ jobs:
 
       - name: Deploy Files via rsync
         run: |
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ root@${{ secrets.SERVER_IP }}/var/www/site/
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ root@${{ secrets.SERVER_IP }}:/var/www/site/
+
